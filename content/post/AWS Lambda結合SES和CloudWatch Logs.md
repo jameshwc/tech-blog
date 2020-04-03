@@ -1,19 +1,19 @@
 ---
-title: "[AWS] Lambda結合SES和CloudWatch Logs"
+title: "[AWS] Lambda 結合 SES 和 CloudWatch Logs"
 date: 2020-04-02T12:13:17Z
 draft: false
 ---
 
 ## Lambda with SES
-> 在Lambda裡使用Python （當然，其他語言亦可）和SES服務寄信通知
+> 在 Lambda 裡使用 Python （當然，其他語言亦可）和 SES 服務寄信通知
 
-+ 要先在SES裡驗證收信人和發信人的信箱
++ 要先在 SES 裡驗證收信人和發信人的信箱
 ![](https://i.imgur.com/zeBdhbo.png)
 
-+ 在Lambda頁面設置好環境變數（MYAWS_REGION、MYAWS_ACCESS_KEY_ID、MYAWS_SECRET_ACCESS_KEY、RECIPIENT、SENDER）
-+ 如果手上的IAM都沒有SES的權限，只有自己有的話，可以在*call boto3.client*時加入ACCESS_KEY_ID和SECRET_ACCESS_KEY。如果沒加，會帶入Lambda預設的IAM。
++ 在 Lambda 頁面設置好環境變數（MYAWS_REGION、MYAWS_ACCESS_KEY_ID、MYAWS_SECRET_ACCESS_KEY、RECIPIENT、SENDER）
++ 如果手上的 IAM 都沒有 SES 的權限，只有自己有的話，可以在 *call boto3.client* 時加入 ACCESS_KEY_ID 和 SECRET_ACCESS_KEY。如果沒加，會帶入 Lambda 預設的 IAM。
     ![](https://i.imgur.com/2XcroJ0.png)
-    - 這裡有一個坑，環境變數名字不能命名為*AWS_ACCESS_KEY_ID*或*AWS_SECRET_ACCESS_KEY*，因為這恰好是Lambda會幫忙填好的資訊（即預設的Lambda IAM），同名的結果會導致讀不到其他環境變數（原因未知，但不要撞名就對了）
+    - 這裡有一個坑，環境變數名字不能命名為 *AWS_ACCESS_KEY_ID* 或 *AWS_SECRET_ACCESS_KEY*，因為這恰好是 Lambda 會幫忙填好的資訊（即預設的 Lambda IAM ），同名的結果會導致讀不到其他環境變數（原因未知，但不要撞名就對了）
 
 
 ```python
@@ -71,11 +71,11 @@ def lambda_handler(event, context=None):
 *send_mail* 改寫自[doc](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-using-sdk-python.html)
 
 ## Lambda with Slack
-+ 在Lambda頁面設置好環境變數（SLACK_URL）
++ 在 Lambda 頁面設置好環境變數（SLACK_URL）
 ![](https://i.imgur.com/czU1w1O.png)
-+ 因呼叫slack API會使用requests這個library，但其並非python內建之函式庫，也沒辦法pip install，解決方案有二：
-    + ```from botocore.vendored import requests```，其用法和requests一樣，但該函式庫[已在19年10月被移除](https://github.com/boto/botocore/pull/1829)，故最新的python3.8並不支援，只能使用python3.6/3.7
-    + ```pip install -t requests .```再將requests的包和其他程式碼打包成zip上傳到Lambda
++ 因呼叫 slack API 會使用 requests 這個 library，但其並非 python 內建之函式庫，也沒辦法 pip install，解決方案有二：
+    + ```from botocore.vendored import requests```，其用法和 requests 一樣，但該函式庫[已在 2019 年 10 月被移除](https://github.com/boto/botocore/pull/1829)，故最新的 python3.8 並不支援，只能使用 python3.6/3.7
+    + ```pip install -t requests .```再將 requests 的包和其他程式碼打包成 zip 上傳到 Lambda
 ```python
 import json
 from botocore.vendored import requests # or import requests
@@ -93,7 +93,7 @@ def lambda_handler(event, context):
 ```
 
 ## Lambda with CloudWatch Logs
-- 資料會被用zip壓縮，並以base64編碼，所以要先解碼
+- 資料會被用 zip 壓縮，並以 base64 編碼，所以要先解碼
 - 一開始拿到的資料應該會長：
 ```jsonld=
 {
@@ -122,7 +122,8 @@ def lambda_handler(event, context):
 }
 ```
 請[參考](https://docs.aws.amazon.com/zh_tw/lambda/latest/dg/services-cloudwatchlogs.html)
-串接CloudWatch Logs的程式碼：(from 尚禮哥)
+
+串接 CloudWatch Logs 的程式碼：
 ```python
 import json
 from botocore.vendored import requests # or import request

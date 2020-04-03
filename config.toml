@@ -1,5 +1,6 @@
 baseurl = "https://tech-blog.jameshsu.csie.org"
 languageCode = "zh-tw"
+defaultContentLanguage = "zh-tw"
 theme = "terminal"
 paginate = 5
 title = "紙上得來終覺淺"
@@ -29,6 +30,7 @@ title = "紙上得來終覺淺"
   # set all headings to their default size (depending on browser settings)
   # it's set to `true` by default
   # oneHeadingSize = false
+  customCss = ["css/custom.css"]
 
 [params.twitter]
   # set Twitter handles for Twitter cards
