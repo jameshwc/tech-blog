@@ -38,6 +38,17 @@ title = "紙上得來終覺淺"
   site = ""
 
 [languages]
+  [languages.zh-tw]
+    languageName = "中文"
+    title = "紙上得來終覺淺"
+    copyright = "jameshwc"
+    menuMore = "查看更多"
+    readMore = "查看更多"
+    readOtherPosts = "看其他文章"
+    [languages.zh-tw.params.logo]
+      logoText = "紙上得來終覺淺"
+      logoHomeLink = "/"
+  
   [languages.en]
     languageName = "English"
     title = "Learn and Code"
@@ -62,13 +73,4 @@ title = "紙上得來終覺淺"
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
-  [languages.zh-tw]
-    languageName = "中文"
-    title = "紙上得來終覺淺"
-    copyright = "jameshwc"
-    menuMore = "查看更多"
-    readMore = "查看更多"
-    readOtherPosts = "看其他文章"
-    [languages.zh-tw.params.logo]
-      logoText = "紙上得來終覺淺"
-      logoHomeLink = "/"
+
