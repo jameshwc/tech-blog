@@ -1,6 +1,6 @@
 ---
-title: "[AWS] Lambda 結合 SES 和 CloudWatch Logs"
-date: 2020-04-02T12:13:17Z
+title: "[AWS] Lambda: 結合 SES 和 CloudWatch Logs"
+date: 2020-01-15T12:13:17Z
 draft: false
 ---
 
