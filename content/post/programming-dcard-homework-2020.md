@@ -67,16 +67,16 @@ func limitVisit(db Database) gin.HandlerFunc {
 
 Go 的 interface 實作是隱式的，換句話說，我不用宣告 redisServer 這個 struct 實作 (implement) Database，只要我寫好 interface 定義的 method 即可。
 ```go
+func (db *redisServer) Init(maxIP int, timeout int) error
 func (db *redisServer) Find(ipaddr string) (existed bool, toomuch bool) 
 func (db *redisServer) GetKey(ipaddr string) (string, string, error)
 func (db *redisServer) SetKey(ipaddr string) error
 func (db *redisServer) IncrementVisitByIP(ipaddr string) error
 ```
-除了 implement 介面定義的內容，當然也可以加一些新的 method 以方便使用，我就多宣告了 init 和 reset
+除了 implement 介面定義的內容，當然也可以加一些新的 method 以方便使用，我就多宣告了 reset
 
 ```go
 func (db *redisServer) Reset() 
-func (db *redisServer) Init(maxIP int, timeout int) error
 ```
 
 至於怎麼把 redisServer 傳到 middleware？
