@@ -7,7 +7,7 @@ draft: false
 > [Github 連結](https://github.com/jameshwc/dcard-middleware)
 
 在 [Dcard lab](https://www.facebook.com/dcardlab/) 看到徵實習的消息，我當然選了我最擅長的後端，有趣的是得完成一項作業才能應徵，雖耳聞已久，這倒是我第一次「做作業」。看了一下題目，挺好玩的，不太滿足於僅僅做完要求，又堆疊了一些額外的東西，每項都是第一次碰，多學了不少東西，故來發文記錄。
-
+<!--more-->
 ## 題目
 Dcard 每天午夜都有大量使用者湧入抽卡，為了不讓伺服器過載，請設計一個 middleware：
 
