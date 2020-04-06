@@ -2,6 +2,7 @@
 title: "[AWS] EC2: Elastic Load Balancer 和 Auto Scaling"
 date: 2020-03-03T05:20:11Z
 draft: false
+description: "使用 Elastic Load Balancer 和 Auto Scaling 部署負載均衡，按照要求的條件（例如 EC2 CPU 使用率超過 60% ）調整機器的數量"
 ---
 
 ## 前置作業: 打包 image

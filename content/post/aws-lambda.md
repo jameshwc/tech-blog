@@ -2,6 +2,7 @@
 title: "[AWS] Lambda: 結合 SES 和 CloudWatch Logs"
 date: 2020-01-15T12:13:17Z
 draft: false
+description: "用 python 寫 Lambda 的 function 結合 SES 服務寄信通知，和串接 CloudWatch Logs"
 ---
 
 ## Lambda with SES

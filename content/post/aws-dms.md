@@ -2,6 +2,7 @@
 title: "[AWS] DMS: 資料庫遷移（DB2 to Aurora）"
 date: 2020-03-10T00:07:59+08:00
 draft: false
+description: "使用 DMS 服務將 IBM DB2 的資料匯至 Aurora "
 ---
 
 ## 前置作業
