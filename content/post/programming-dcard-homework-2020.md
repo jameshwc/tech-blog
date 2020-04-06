@@ -65,7 +65,7 @@ func limitVisit(db Database) gin.HandlerFunc {
 ```
 也就是說，我可以留到最後再來考慮實作 db 的細節，例如我可以猶豫這個 db 的系統要用 PostgreSQL 還是 redis，但不管用哪一個，只要符合 interface 所定義的內容，想用哪個就用哪個。
 
-Go 的 interface 實作是隱式的，換句話說，我不用宣告 redisServer 這個 struct 實作 (implement) Database，只要我寫好 interface 定義的 method 即可。
+Go 的 implement 是隱式的，換句話說，我不用宣告 redisServer 這個 struct 實作 Database，只要我寫好 interface 定義的 method 即可。
 ```go
 func (db *redisServer) Init(maxIP int, timeout int) error
 func (db *redisServer) Find(ipaddr string) (existed bool, toomuch bool) 
