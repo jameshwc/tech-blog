@@ -1,7 +1,8 @@
 ---
-title: "[DevOps] 從外部監控網站狀態：Prometheus & Blackbox exporter"
+title: "[DevOps] 從外部監控網站狀態：Prometheus & Blackbox Exporter"
 date: 2020-06-29T15:58:24+08:00
 draft: false
+description: "利用 Prometheus & Blackbox Exporter 從外部黑箱測試網站服務有沒有正常運作"
 ---
 
 > 此篇文章為個人在系上服務之團隊的期末報告，略加修改
