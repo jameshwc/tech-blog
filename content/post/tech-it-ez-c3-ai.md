@@ -1,6 +1,7 @@
 ---
 title: "[Tech IT Ez] C3 AI Suite：試圖一統天下的 AI 大平台"
 date: 2021-02-23T20:06:38+08:00
+description: 本文從技術角度出發，以 c3.ai 在官網發布的[白皮書](https://c3.ai/wp-content/uploads/2019/12/C3.ai-A-New-Technology-Stack.pdf)作為資料來源，期望能以淺顯易懂的方式向讀者介紹 c3.ai 該公司主要產品 C3 AI Suite 的特色。
 draft: false
 ---
 
