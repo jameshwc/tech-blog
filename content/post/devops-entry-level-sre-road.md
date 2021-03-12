@@ -1,7 +1,7 @@
 ---
 title: "[DevOps] 初階 DevOps/SRE 工程師是如何煉成的"
 date: 2021-03-12T15:07:03+08:00
-description: "階 DevOps/SRE 工程師是如何煉成的"
+description: "初階 DevOps/SRE 工程師是如何煉成的"
 draft: false
 ---
 
