@@ -5,6 +5,7 @@ description: "初階 DevOps/SRE 工程師是如何煉成的"
 draft: false
 ---
 
+> 本文同步發表於 [ptt (soft_job)](https://www.ptt.cc/bbs/Soft_Job/M.1615535884.A.7C7.html)
 ## 前言
 
 背景是學生，大約兩年的 SA/DevOps 學習經驗，剛拿到 ByteDance 的 SRE offer，所以應該可以算是 Entry-level 的 SRE 了，會想寫這篇分享是因為看到滿多人對 DevOps/SRE 的印象是很吃經驗，不太可能讓新鮮人做；對這種印象算一半認同（我就是反例XD），另一方面也想讓有興趣的人知道該如何入門這個領域。
